@@ -1,12 +1,18 @@
 GIT
+  remote: https://github.com/firstdraft/firstdraft_generators.git
+  revision: 9405e70b3d5bf2215917c7d268baa07ab76386fd
+  specs:
+    firstdraft_generators (0.0.3)
+
+GIT
   remote: https://github.com/firstdraft/grade_runner.git
-  revision: 83db5d2b90086055aa3204afe38a18394aecea16
+  revision: 68d08e4542501c1d3cc0d81603ba64b61bd16070
   specs:
     grade_runner (0.0.1)
 
 GIT
   remote: https://github.com/firstdraft/web_git.git
-  revision: 9a8ee509422e7562372845cd85e564d53afb4602
+  revision: b596ae6d04f5931a71a9e6b4715e785c006de552
   specs:
     web_git (0.0.1)
       bootstrap (~> 4.0.0.alpha6)
@@ -104,7 +110,6 @@ GEM
       factory_girl (~> 4.8.0)
       railties (>= 3.0.0)
     ffi (1.9.18)
-    firstdraft_generators (0.0.3)
     font-awesome-sass (4.7.0)
       sass (>= 3.2)
     globalid (0.4.0)
@@ -144,10 +149,10 @@ GEM
     nio4r (2.1.0)
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
-    octicons (3.0.1)
+    octicons (5.0.4)
       nokogiri (>= 1.6.3.1)
-    octicons_helper (3.0.1)
-      octicons (~> 3.0)
+    octicons_helper (4.0.6)
+      octicons
       rails
     pry (0.10.4)
       coderay (~> 1.1.0)
@@ -216,6 +221,11 @@ GEM
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
     slop (3.6.0)
+    spring (2.0.2)
+      activesupport (>= 4.2)
+    spring-watcher-listen (2.0.1)
+      listen (>= 2.7, < 4.0)
+      spring (>= 1.2, < 3.0)
     sprockets (3.7.1)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -266,7 +276,7 @@ DEPENDENCIES
   capybara
   dotenv-rails
   factory_girl_rails
-  firstdraft_generators
+  firstdraft_generators!
   font-awesome-sass (~> 4.7.0)
   grade_runner!
   jbuilder (~> 2.5)
@@ -279,6 +289,8 @@ DEPENDENCIES
   rails (~> 5.1.2)
   rspec-rails
   sass-rails (~> 5.0)
+  spring
+  spring-watcher-listen (~> 2.0.0)
   sqlite3
   turbolinks
   tzinfo-data
@@ -289,4 +301,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-   1.14.6
+   1.15.4
