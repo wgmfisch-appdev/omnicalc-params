@@ -12,11 +12,11 @@ GIT
 
 GIT
   remote: https://github.com/firstdraft/web_git.git
-  revision: b596ae6d04f5931a71a9e6b4715e785c006de552
+  revision: 46e0d88a7baf7de33f6ad9c153b9fea284028221
   specs:
     web_git (0.0.1)
-      bootstrap (~> 4.0.0.alpha6)
-      jquery-rails (= 4.3.1)
+      bootstrap (~> 4.0.0.beta)
+      jquery-rails
       octicons_helper
       tether-rails
       turbolinks (~> 5)
@@ -68,7 +68,7 @@ GEM
       activerecord (>= 3.2, < 6.0)
       rake (>= 10.4, < 13.0)
     arel (8.0.0)
-    autoprefixer-rails (7.1.2.2)
+    autoprefixer-rails (7.1.5)
       execjs
     awesome_print (1.8.0)
     better_errors (2.1.1)
@@ -78,8 +78,9 @@ GEM
     bindex (0.5.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bootstrap (4.0.0.alpha6)
+    bootstrap (4.0.0.beta)
       autoprefixer-rails (>= 6.0.3)
+      popper_js (~> 1.11.1)
       sass (>= 3.4.19)
     builder (3.2.3)
     byebug (9.0.6)
@@ -110,8 +111,6 @@ GEM
       factory_girl (~> 4.8.0)
       railties (>= 3.0.0)
     ffi (1.9.18)
-    font-awesome-sass (4.7.0)
-      sass (>= 3.2)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     hashdiff (0.3.4)
@@ -272,20 +271,17 @@ DEPENDENCIES
   awesome_print
   better_errors
   binding_of_caller
-  bootstrap (~> 4.0.0.alpha6)
   byebug
   capybara
   dotenv-rails
   factory_girl_rails
   firstdraft_generators!
-  font-awesome-sass (~> 4.7.0)
   grade_runner!
   jbuilder (~> 2.5)
   jquery-rails
   letter_opener
   listen (>= 3.0.5, < 3.2)
   meta_request
-  popper_js
   pry-rails
   puma (~> 3.7)
   rails (~> 5.1.2)
