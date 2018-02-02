@@ -20,26 +20,26 @@ Your goal will be to build a simplified version of Omnicalc.
 
 The way it should work is:
 
- - If I visit an address of the pattern
+ - If I visit any address of the pattern
 
     ```
-    /flexible/square/:number
+    /flexible/square/[WHATEVER]
     ```
 
-    I should see the square of the number in the third segment of the path.
+    And if put a number in the third segment of the path, I should see the square of the number.
 
- - If I visit an address of the pattern
-
-   ```
-   /flexible/square_root/:number
-   ```
-
-   I should see the square root of the number in the third segment of the path.
-
- - If I visit an address of the pattern
+ - If I visit any address of the pattern
 
    ```
-   /flexible/payment/:basis_points/:number_of_years/:present_value
+   /flexible/square_root/[WHATEVER]
+   ```
+
+   And if put a number in the third segment of the path, I should see the square root of the number.
+
+ - If I visit any address of the pattern
+
+   ```
+   /flexible/payment/[BASIS POINTS]/[NUMBER OF YEARS]/[PRESENT VALUE]
    ```
 
    I should see the **monthly** payment due, assuming that
@@ -50,10 +50,10 @@ The way it should work is:
 
         ![Payment formula](payment_formula.gif?raw=true "Payment formula")
 
- - If I visit an address of the pattern
+ - If I visit any address of the pattern
 
    ```
-   /flexible/random/:min/:max
+   /flexible/random/[SMALL NUMBER]/[BIG NUMBER]
    ```
 
    I should see a random number that falls between the numbers in the third and fourth segments of the path.
@@ -84,7 +84,7 @@ The way it should work is:
     >
     > A random number between 50 and 100 is 87.
 
-**All of these should work no matter what integers I type into the flexible segments of the path.**
+**All of these should work no matter what _integers_ I type into the flexible segments of the path.**
 
 Remember:
 
