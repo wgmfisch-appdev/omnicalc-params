@@ -8,38 +8,38 @@ Your goal will be to build a simplified version of Omnicalc.
 
 ## Project Specific Setup
 
- 1. Ensure that you've forked this repo to your own GitHub account.
- 1. Set up [a Cloud9 workspace as usual](https://guides.firstdraft.com/getting-started-with-cloud-9.html) based on this repo.
- 1. `bin/setup`
- 1. Run Project
+ 1. Clone this project to your workspace as usual.
+ 1. Set up the project: `bin/setup`
+ 1. Start your web server: `bin/server`
+ 1. Preview -> Preview Running Application
  1. Navigate to the live app in Chrome — there's nothing there but the default Rails welcome screen!
- 1. **This is a brand new, untouched Rails application.** All we've done is add the instructions you're reading in this README. **You could generate the exact same thing right now.** On Cloud9, all you do is click "Create a new workspace" and then choose Ruby on Rails.
- 1. As you work, use the [Continuous Integration workflow](https://guides.firstdraft.com/continuous-integration.html) to save and submit.
+ 1. **This is a brand new, untouched Rails application.** All we've done is add the instructions you're reading in this README. **You could generate the exact same thing right now with the `rails new your_app_name` command.**
+ 1. As you work, use `rails grade:all` to see how you're doing as usual.
 
 ## Part I: Flexible Routes
 
 The way it should work is:
 
- - If I visit an address of the pattern
+ - If I visit any address of the pattern
 
     ```
-    /flexible/square/:number
+    /flexible/square/[WHATEVER]
     ```
 
-    I should see the square of the number in the third segment of the path.
+    And if put a number in the third segment of the path, I should see the square of the number.
 
- - If I visit an address of the pattern
-
-   ```
-   /flexible/square_root/:number
-   ```
-
-   I should see the square root of the number in the third segment of the path.
-
- - If I visit an address of the pattern
+ - If I visit any address of the pattern
 
    ```
-   /flexible/payment/:basis_points/:number_of_years/:present_value
+   /flexible/square_root/[WHATEVER]
+   ```
+
+   And if put a number in the third segment of the path, I should see the square root of the number.
+
+ - If I visit any address of the pattern
+
+   ```
+   /flexible/payment/[BASIS POINTS]/[NUMBER OF YEARS]/[PRESENT VALUE]
    ```
 
    I should see the **monthly** payment due, assuming that
@@ -50,10 +50,10 @@ The way it should work is:
 
         ![Payment formula](payment_formula.gif?raw=true "Payment formula")
 
- - If I visit an address of the pattern
+ - If I visit any address of the pattern
 
    ```
-   /flexible/random/:min/:max
+   /flexible/random/[SMALL NUMBER]/[BIG NUMBER]
    ```
 
    I should see a random number that falls between the numbers in the third and fourth segments of the path.
@@ -84,7 +84,7 @@ The way it should work is:
     >
     > A random number between 50 and 100 is 87.
 
-**All of these should work no matter what integers I type into the flexible segments of the path.**
+**All of these should work no matter what _integers_ I type into the flexible segments of the path.**
 
 Remember:
 
@@ -122,4 +122,4 @@ The way it should work is:
 
 ## Stretch Goals
 
- - [Bootstrap it](http://getbootstrap.com/components/#panels) to make it look like [the real Omnicalc](http://omnicalc-target.herokuapp.com/). We've already connected `bootstrap.css` and [Font Awesome](http://fontawesome.io/icons/) for you, so you can just start using them.
+ - [Bootstrap it](http://getbootstrap.com) to make it look similar to [the real Omnicalc](http://omnicalc-target.herokuapp.com/). We've already connected `bootstrap.css` and [Font Awesome](http://fontawesome.io/icons/) for you, so you can just start using them.
