@@ -122,7 +122,7 @@ describe "/square/new" do
 
     click_button "Calculate square"
 
-    expect(page).to_not have_current_path("/square/new", only_path: true)
+    expect(page).to_not have_current_path("/square/new", ignore_query: true)
   end
 end
 
@@ -204,7 +204,7 @@ describe "/square_root/new" do
 
     click_button "Calculate square root"
 
-    expect(page).to_not have_current_path("/square_root/new", only_path: true)
+    expect(page).to_not have_current_path("/square_root/new", ignore_query: true)
   end
 end
 
@@ -302,7 +302,7 @@ describe "/payment/new" do
 
     click_button "Calculate monthly payment"
 
-    expect(page).to_not have_current_path("/payment/new", only_path: true)
+    expect(page).to_not have_current_path("/payment/new", ignore_query: true)
   end
 end
 
@@ -438,7 +438,7 @@ describe "/random/new" do
 
     click_button "Pick random number"
 
-    expect(page).to_not have_current_path("/random/new", only_path: true)
+    expect(page).to_not have_current_path("/random/new", ignore_query: true)
   end
 end
 
