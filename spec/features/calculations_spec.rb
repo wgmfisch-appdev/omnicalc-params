@@ -433,8 +433,11 @@ describe "/random/new" do
 end
 
 describe "/random/new" do
-  it "leads to another functional RCAV when submitted ", points: 6, hint: h("button_type") do
+  it "leads to another functional RCAV when submitted ", points: 6, hint: h("button_type label_for_input copy_must_match") do
     visit "/random/new"
+
+    fill_in "Minimum", with: 1.0
+    fill_in "Maximum", with: 10.0
 
     click_button "Pick random number"
 
@@ -447,5 +450,24 @@ describe "/random/new" do
     visit "/random/new"
 
     expect(page).to have_css("input[name]", count: 2)
+  end
+end
+
+describe "/random/new" do
+  it "outputs a random number", points: 10, hint: h("structure_must_match label_for_input copy_must_match") do
+    random_numbers = []
+    5.times do
+      visit "/random/new"
+      fill_in "Minimum", with: 1.0
+      fill_in "Maximum", with: 10.0
+      click_button "Pick random number"
+      page.all("dd").each do |el|
+        num = el.text.to_f
+        if num != 1 && num != 10
+          random_numbers.push(num)
+        end
+      end
+    end
+    expect(random_numbers.uniq.length).to be > 1
   end
 end
