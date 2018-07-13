@@ -6,15 +6,15 @@ Your goal will be to build a simplified version of Omnicalc.
 
 ### [Here is the target you will ultimately build.](https://omnicalc-params.herokuapp.com/)
 
-## Project Specific Setup
+## Standard Workflow
 
- 1. Clone this project to your workspace as usual.
+ 1. From [your Cloud9 repositories list](https://c9.io/account/repos), set up a workspace [as usual](https://guides.firstdraft.com/starting-on-a-project-in-cloud9).
  1. Set up the project: `bin/setup`
- 1. Start your web server: `bin/server`
- 1. Preview -> Preview Running Application
- 1. Navigate to the live app in Chrome — there's nothing there but the default Rails welcome screen!
- 1. **This is a brand new, untouched Rails application.** All we've done is add the instructions you're reading in this README. **You could generate the exact same thing right now with the `rails new your_app_name` command.**
- 1. As you work, use `rails grade:all` to see how you're doing as usual.
+ 1. Start the web server by clicking "Run Project".
+ 1. Navigate to your live application preview.
+ 1. As you work, remember to navigate to `/git` and **commit often as you work.**
+ 1. Make new branches freely to experiment! _Especially_ before starting on a new task.
+ 1. Run `rails grade` as often as you like to see how you are doing, but **make sure you test your app manually first to make sure it matches the target's behavior first**.
 
 ## Part I: Flexible Routes
 

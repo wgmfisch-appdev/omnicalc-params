@@ -24,3 +24,9 @@
 
 # Ignore dotenv files
 /.env*
+
+# Ignore whitelist.yml
+/whitelist.yml
+
+# Ignore Cloud9 plugins
+/cloud9_plugins.sh
