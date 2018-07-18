@@ -30,3 +30,5 @@
 
 # Ignore Cloud9 plugins
 /cloud9_plugins.sh
+
+grades.yml
