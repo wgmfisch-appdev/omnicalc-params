@@ -43,7 +43,7 @@ class CalcController < ApplicationController
   end
   
   def payment_form_results
-    @apr = params.fetch("user_apr").to_f / 120000
+    @apr = params.fetch("user_apr").to_f / 1200
     @duration = params.fetch("user_years").to_i
     @principal = params.fetch("user_pv").to_i
     @payment = (@apr*@principal)/(1-((1+@apr)**(-12*@duration)))
@@ -53,4 +53,13 @@ class CalcController < ApplicationController
     render("calc_templates/payment_form.html.erb")
   end
   
+  def random_results
+    @min = params.fetch("user_min").to_f
+    @max = params.fetch("user_max").to_f
+    @rand = rand(@min..@max)
+    render("calc_templates/random_results.html.erb")
+  end
+  def random_form
+    render("calc_templates/random_form.html.erb")
+  end
 end
