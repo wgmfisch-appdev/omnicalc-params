@@ -23,4 +23,13 @@ class CalcController < ApplicationController
     @num =  rand(@small.to_i..@large.to_i) #@small.to_f + rand(@large.to_f)
     render("calc_templates/flexible_random.html.erb")
   end
+  
+  def square_form_results
+    @input_number = params.fetch("user_number").to_i
+    @output_number = @input_number ** 2
+    render("calc_templates/square_results.html.erb")
+  end
+  def blank_square_form
+    render("calc_templates/blank_square_form.html.erb")
+  end
 end
