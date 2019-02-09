@@ -42,4 +42,15 @@ class CalcController < ApplicationController
     render("calc_templates/square_root_form.html.erb")
   end
   
+  def payment_form_results
+    @apr = params.fetch("user_apr").to_f / 120000
+    @duration = params.fetch("user_years").to_i
+    @principal = params.fetch("user_pv").to_i
+    @payment = (@apr*@principal)/(1-((1+@apr)**(-12*@duration)))
+    render("calc_templates/payment_results.html.erb")
+  end
+  def payment_form
+    render("calc_templates/payment_form.html.erb")
+  end
+  
 end
