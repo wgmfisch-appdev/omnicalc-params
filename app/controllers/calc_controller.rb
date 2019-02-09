@@ -25,11 +25,21 @@ class CalcController < ApplicationController
   end
   
   def square_form_results
-    @input_number = params.fetch("user_number").to_i
+    @input_number = params.fetch("user_number").to_f
     @output_number = @input_number ** 2
     render("calc_templates/square_results.html.erb")
   end
   def blank_square_form
     render("calc_templates/blank_square_form.html.erb")
   end
+  
+  def square_root_form_results
+    @input_number = params.fetch("user_number").to_f
+    @output_number = @input_number ** (0.5)
+    render("calc_templates/square_root_results.html.erb")
+  end
+  def square_root_form
+    render("calc_templates/square_root_form.html.erb")
+  end
+  
 end
