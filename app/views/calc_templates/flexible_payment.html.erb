@@ -1,0 +1,3 @@
+<h1>Flexible Payment</h1>
+
+<p>A <%= @duration %> year loan of <%= number_to_currency(@principal) %>, with an annual interest rate of <%= number_to_percentage(@apr*1200, options = {:precision => 2}) %>, requires a monthly payment of <%= number_to_currency(@payment) %>.</p>
